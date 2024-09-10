@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="icon" href="./Screenshot 2024-09-10 194100.png" type="logo">
+    <title>PixelQuest</title>
+</head>
+
+<body>
+    <!-- Water Drops Background -->
+    <div id="water-drops"></div>
+
+  <!-- Glowing Responsive Navbar -->
+<header class="navbar">
+    <div class="logo">
+        <a href="#">PixelQuest</a>
+    </div>
+    <nav class="nav-links">
+        <a href="#">Explore</a>
+        <a href="#">Join</a>
+        <a href="#">Login</a>
+        <a href="#" class="highlight">Signup</a>
+    </nav>
+</header>
+
+  <!-- main section -->
+<main class="main-section">
+    <div class="title-container">
+        <h1 class="title">Discover Stunning Images</h1>
+    </div>
+    <!-- <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search for images...">
+        <button class="search-button">Search</button>
+    </div> -->
+
+    <div class="search-page">
+        <div class="search-container">
+            <form action="./search-results.html" method="GET" class="search-form">
+                <input type="text" name="query" class="search-bar" placeholder="Search for images..." required>
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 PixelQuest. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+
+    <script>
+        particlesJS('water-drops',
+        {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 10,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "bottom",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": false,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+
+</html>
