@@ -18,7 +18,7 @@ body {
     height: 100vh;
 }
 
-/* Glowing Navbar Styling */
+/* Base Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -108,20 +108,47 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: column; /* Stack the navbar items vertically */
         align-items: center;
         padding: 15px;
     }
 
     .nav-links {
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /* Arrange links in a row */
+        justify-content: center;
         margin-top: 10px;
+        width: 100%;
     }
 
     .nav-links a {
-        margin: 10px 0;
-        font-size: 20px;
+        margin: 0 10px; /* Margin to space out the links */
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Screens (480px or less) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 8px; /* Reduce space between logo and links */
+    }
+
+    .nav-links {
+        flex-direction: row; /* Links in a row */
+        justify-content: center; /* Center the links */
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        margin: 5px 0; /* Less margin between links */
+        font-size: 14px; /* Smaller font size for better fit */
     }
 }
 
